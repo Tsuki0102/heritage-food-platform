@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heritage.food.dao.ProductMapper">
+
+    <select id="selectProductList" resultType="com.heritage.food.model.Product">
+        SELECT * FROM tb_product
+        WHERE 1=1
+        <if test="category != null and category != ''">
+            AND category = #{category}
+        </if>
+        <if test="keyword != null and keyword != ''">
+            AND (name LIKE CONCAT('%', #{keyword}, '%') OR description LIKE CONCAT('%', #{keyword}, '%'))
+        </if>
+        <if test="sortBy != null and sortBy != ''">
+            ORDER BY ${sortBy}
+            <if test="sortOrder != null and sortOrder != ''">
+                ${sortOrder}
+            </if>
+        </if>
+    </select>
+
+    <select id="selectHotProducts" resultType="com.heritage.food.model.Product">
+        SELECT * FROM tb_product
+        WHERE status = 1
+        ORDER BY sales_count DESC
+        LIMIT #{limit}
+    </select>
+
+    <select id="selectRecommendProducts" resultType="com.heritage.food.model.Product">
+        SELECT * FROM tb_product
+        WHERE status = 1
+        ORDER BY rating DESC
+        LIMIT #{limit}
+    </select>
+
+    <select id="selectAllCategories" resultType="java.lang.String">
+        SELECT DISTINCT category FROM tb_product
+        WHERE status = 1
+    </select>
+
+</mapper>

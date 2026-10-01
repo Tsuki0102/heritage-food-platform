@@ -1,0 +1,123 @@
+{
+  "foods": [
+    {
+      "id": "1",
+      "name": "北京烤鸭",
+      "description": "北京烤鸭是中国著名的传统美食，以其皮脆肉嫩、色泽红艳而闻名于世。",
+      "steps": [
+        {
+          "id": "1-1",
+          "time": "准备阶段",
+          "title": "选鸭",
+          "description": "选择体型适中、肉质鲜美的北京填鸭，通常重量在2.5-3公斤之间。",
+          "image": "/images/beijing-duck.jpg"
+        },
+        {
+          "id": "1-2",
+          "time": "处理阶段",
+          "title": "宰杀清洗",
+          "description": "将鸭子宰杀后，去除内脏，清洗干净，然后用开水烫皮，使皮肤收紧。",
+          "image": "/images/beijing-duck.jpg"
+        },
+        {
+          "id": "1-3",
+          "time": "腌制阶段",
+          "title": "腌制",
+          "description": "用精盐、花椒等调料腌制鸭子，使其入味。",
+          "image": "/images/beijing-duck.jpg"
+        },
+        {
+          "id": "1-4",
+          "time": "烤制阶段",
+          "title": "挂炉烤制",
+          "description": "将鸭子挂入特制的烤炉中，用果木火烤制，温度控制在230-250℃之间，烤制时间约45分钟。",
+          "image": "/images/beijing-duck.jpg"
+        },
+        {
+          "id": "1-5",
+          "time": "完成阶段",
+          "title": "切片上桌",
+          "description": "将烤好的鸭子取出，趁热切片，搭配荷叶饼、葱丝、黄瓜条和甜面酱食用。",
+          "image": "/images/beijing-duck.jpg"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "广式早茶",
+      "description": "广式早茶是广州地区的传统饮食文化，以其品种丰富、制作精细而著称。",
+      "steps": [
+        {
+          "id": "2-1",
+          "time": "准备阶段",
+          "title": "食材准备",
+          "description": "准备各种食材，包括面粉、虾、猪肉、蔬菜等。",
+          "image": "/images/guangzhou-dimsum.jpg"
+        },
+        {
+          "id": "2-2",
+          "time": "制作阶段",
+          "title": "制作点心",
+          "description": "制作各种点心，如虾饺、烧卖、凤爪、排骨等。",
+          "image": "/images/guangzhou-dimsum.jpg"
+        },
+        {
+          "id": "2-3",
+          "time": "蒸制阶段",
+          "title": "蒸制点心",
+          "description": "将制作好的点心放入蒸笼中蒸制，时间根据不同点心而定。",
+          "image": "/images/guangzhou-dimsum.jpg"
+        },
+        {
+          "id": "2-4",
+          "time": "完成阶段",
+          "title": "上桌享用",
+          "description": "将蒸好的点心端上桌，搭配茶水享用。",
+          "image": "/images/guangzhou-dimsum.jpg"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "苏州园林糕团",
+      "description": "苏州园林糕团是苏州地区的传统糕点，以其精致美观、口感软糯而闻名。",
+      "steps": [
+        {
+          "id": "3-1",
+          "time": "准备阶段",
+          "title": "原料准备",
+          "description": "准备糯米粉、粳米粉、白糖、豆沙等原料。",
+          "image": "/images/suzhou-pastry.jpg"
+        },
+        {
+          "id": "3-2",
+          "time": "和面阶段",
+          "title": "和面",
+          "description": "将糯米粉和粳米粉混合，加入适量的水和面，揉成面团。",
+          "image": "/images/suzhou-pastry.jpg"
+        },
+        {
+          "id": "3-3",
+          "time": "制作阶段",
+          "title": "包馅成型",
+          "description": "将面团分成小剂子，包入豆沙等馅料，捏成各种形状。",
+          "image": "/images/suzhou-pastry.jpg"
+        },
+        {
+          "id": "3-4",
+          "time": "蒸制阶段",
+          "title": "蒸制",
+          "description": "将成型的糕团放入蒸笼中蒸制，时间约20分钟。",
+          "image": "/images/suzhou-pastry.jpg"
+        },
+        {
+          "id": "3-5",
+          "time": "完成阶段",
+          "title": "装饰上桌",
+          "description": "将蒸好的糕团取出，进行装饰，然后上桌享用。",
+          "image": "/images/suzhou-pastry.jpg"
+        }
+      ]
+    }
+  ]
+}

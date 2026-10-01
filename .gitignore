@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build outputs
+dist/
+build/
+target/
+
+# Logs
+logs/
+*.log
+
+# IDE and editors
+.idea/
+.vscode/
+.settings/
+.classpath
+.project
+*.iml
+*.swp
+*.swo
+*~
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+
+# Uploads directory
+uploads/
+
+# Maven
+.mvn/
+
+# Gradle
+.gradle/
+
+# Docker
+.dockerignore
+
+# Local development
+.local/
+
+# 后端本地私密配置（真实密钥/密码，不入库；模板见 application-local.yml.example）
+application-local.yml
+
+# 参赛材料归档（仅本地保留，不推送；体积大且含答辩信息）
+2026029142-作品主文件夹/

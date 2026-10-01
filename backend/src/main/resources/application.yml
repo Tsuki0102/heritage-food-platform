@@ -1,0 +1,52 @@
+server:
+  port: 8088
+
+spring:
+  # 本地私密配置（AI Key、数据库密码等真实值），文件已加入 .gitignore 不入库
+  # 模板见 application-local.yml.example，环境变量 DASHSCOPE_API_KEY / MYSQL_USERNAME / MYSQL_PASSWORD 同样有效
+  config:
+    import: optional:classpath:application-local.yml
+  web:
+    resources:
+      static-locations: file:${user.dir}/uploads/
+      cache:
+        period: 0
+  datasource:
+    url: jdbc:mysql://localhost:3306/feiyi_food_platform?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:123456}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.heritage.food.model
+  global-config:
+    db-config:
+      id-type: auto
+
+# 应用自定义路径（WebConfig 静态映射、FileController 上传目录共用）
+app:
+  upload-dir: ${user.dir}/uploads
+  frontend-images-dir: ${user.dir}/../frontend/public/images
+
+file:
+  upload:
+    path: ${app.upload-dir}
+
+logging:
+  level:
+    com.heritage.food: debug
+    org.springframework.jdbc: debug
+    org.mybatis: debug
+
+# 通义千问（AI 美食讲解）。api-key 优先级：环境变量 DASHSCOPE_API_KEY > application-local.yml
+# 未配置时仅 AI 讲解不可用，其余功能不受影响
+dashscope:
+  api-key: ${DASHSCOPE_API_KEY:}
+  model: ${DASHSCOPE_MODEL:qwen-turbo}
